@@ -1,4 +1,4 @@
-> NLW eSports - trilha explorer
+# NLW eSports - trilha explorer
 
 Projeto construido evento Next Level Week da Rocketseat, usando 
 HTML e CSS.
