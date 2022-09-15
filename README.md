@@ -1,6 +1,6 @@
 # NLW
 
-#Primeira página HTML com CSS
+# Primeira página HTML com CSS
 ## Foi criada no envento NLW da Rocketseat na trila explorer
 
 ### First HTML page with CSS
