@@ -1,0 +1,205 @@
+/*muda as definições padrões do navegador*/
+* {
+    margin: 0;
+    padding: 0;
+    /*mantém sempre a largura definida no main*/
+    box-sizing: border-box;
+}
+
+ul {
+    /*para remover os pontinhos nas img da lista*/
+    list-style: none;
+}
+
+body {
+    background-image: url(./asseets/Fundo.jpg);
+    /*img vai ficar no centro e topo sempre*/
+    background-position: top center;
+    /*Preenche toda a tela independente do tamanho*/
+    background-size: 100% auto;
+    /*Não repete a img pra preencher a tela*/
+    background-repeat: no-repeat;
+    background-color: #121214;
+}
+
+/*Coloca a fonte inter na página*/
+body * {
+    font-family: 'Inter', sans-serif;
+    /*Altura da linha*/
+    line-height: 160%;
+}
+
+header {
+
+    padding-top: 32px;
+}
+
+header div {
+    width: 120px;
+    /*magin auto alinha a img no centro*/
+    margin: auto;
+    background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50.52%, #E2D45C 100%);
+    border-radius: 50%;
+
+    display: flex;
+    padding: 4px;
+
+    transition: transform .3s;
+}
+
+header div:hover {
+    transform: scale(1.1);
+}
+
+header img {
+    /*100% do tamanho da div onde a img está*/
+    width: 100%;
+    border-radius: 50%;
+
+}
+
+
+main {
+    /*Largur máx de 580 pixels*/
+    max-width: 580px;
+    /*Ocupa apenas 90% da largura da tela*/
+    width: 90%;
+    /*Calcula automaticamente as margens*/
+    margin: 32px auto;
+
+    display: grid;
+    gap: 24px;
+
+    margin-top: 32px;
+}
+
+section {
+    color: white;
+    background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50.52%, #E2D45C 100%);
+    padding-top: 4px;
+    border-radius: 10px;
+}
+
+section div {
+    background-color: #2a2634;
+    padding: 32px;
+    padding-top: 24px;
+    border-radius: 8px;
+}
+
+/*Caracteristicas pegas do figma para as letras*/
+section h2 {
+    letter-spacing: -0.47px;
+}
+
+section p {
+    letter-spacing: -0.18px;
+    color: #A1A1AA;
+}
+
+section ul {
+    /*Visualização das caixas. flex faz todos os elementos ficarem lado a lado*/
+    display: flex;
+    /*Gera um espaço entre os elementos na msm linhaS*/
+    gap: 16px;
+
+    margin-top: 24px;
+}
+
+section ul li {
+    transition: transform .3s;
+}
+
+section ul li:hover {
+
+    transform: scale(1.1);
+}
+
+.games-list img {
+    width: 90px;
+    border-radius: 8px;
+
+}
+
+.channel-list img {
+    border-radius: 50%;
+    width: 70px;
+    border: 1px solid #443e54;
+}
+
+/*ANIMATION*/
+
+header div {
+    animation: fromTop .3s backwards;
+    animation-delay: .2s;
+}
+
+main section {
+
+    animation: fromBotton .7s backwards;
+    animation-delay: .2s;
+}
+
+from {
+    /* Subir 30px no eixo Y */
+    transform: translateY(-30px);
+    opacity: 0;
+
+}
+
+to {
+    /*Todo elemento começa na posição 0*/
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* Pega um div por vez do MAIN */
+main section:nth-child(1) {
+
+    animation-delay: .0s;
+}
+
+main section:nth-child(2) {
+
+    animation-delay: .3s;
+}
+
+main section:nth-child(3) {
+
+    animation-delay: .6s;
+}
+
+
+
+/*tag de animação*/
+@keyframes fromTop {
+    from {
+        /* Subir 30px no eixo Y */
+        transform: translateY(-30px);
+        opacity: 0;
+
+    }
+
+    to {
+        /*Todo elemento começa na posição 0*/
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+}
+
+@keyframes fromBotton {
+    from {
+        /* Subir 30px no eixo Y */
+        transform: translateY(30px);
+        opacity: 0;
+
+    }
+
+    to {
+        /*Todo elemento começa na posição 0*/
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+}
